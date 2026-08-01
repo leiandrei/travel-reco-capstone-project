@@ -26,10 +26,14 @@ async function searchTravelRecommendations(event) {
 
         let foundQueries = [];
 
-        if (query === 'beach' || query === "beaches") {
+        if (query === 'beach' || query === 'beaches') {
             foundQueries = data.beaches;
         } else if (query === 'temple' || query === 'temples') {
             foundQueries = data.temples;
+        } else if (query === 'country' || query === 'countries') {
+            data.countries.forEach(country => {
+                foundQueries = foundQueries.concat(country.cities);
+            });
         } else {
             const countrySearch = data.countries.find(country => 
                 country.name.toLowerCase() === query
@@ -76,7 +80,7 @@ const navlinks = document.querySelectorAll('.navlinks a');
 
 navlinks.forEach(link => {
     link.addEventListener('click', clearFields);
-})
+});
 
 const homeSection = document.getElementById('home');
 const searchBarContainer = document.querySelector('.search-bar');
