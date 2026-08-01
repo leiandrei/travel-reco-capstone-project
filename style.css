@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap');
+
+:root {
+    --bg-color: #ffffff;
+    --text-main: #111111;
+    --text-muted: #666666;
+    --border-color: #e0e0e0;
+    --hover-bg: #f9f9f9;
+    --accent-color: #137b70;
+    
+    --font-heading: 'Bebas Neue', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .pos-card {
+    font-family: var(--font-heading);
+    letter-spacing: 1.5px;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-main);
+}
+
+ul {
+    list-style: none;
+}
+
+#main {
+    padding-top: 80px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--bg-color);
+    position: fixed;   
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo { order: 1; }
+.navlinks { order: 2; margin-right: auto; margin-left: 3rem; }
+.search-bar { order: 3; }
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.search-bar form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-bar input {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-family: var(--font-body);
+    outline: none;
+    width: 250px;
+}
+
+.search-bar input:focus {
+    border-color: var(--accent-color);
+}
+
+button {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 20px;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border: 1px solid var(--accent-color);
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #0e5e55;
+    border-color: #0e5e55;
+}
+
+.navlinks ul {
+    display: flex;
+    gap: 2rem;
+    font-weight: 600;
+}
+
+.navlinks a:hover {
+    color: var(--accent-color);
+}
+
+.social-medias {
+    position: fixed;       
+    left: 20px;            
+    top: 50%;              
+    transform: translateY(-50%); 
+    display: flex;
+    flex-direction: column; 
+    gap: 1.5rem;           
+    z-index: 1000;         
+}
+
+.soc-icon {
+    width: 28px;           
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.soc-icon:hover {
+    opacity: 1;
+    transform: scale(1.15); 
+}
+
+.home, .about, .contacts {
+    padding: 3rem 5% 5rem 8%; 
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 70vh;
+}
+
+.home-description {
+    max-width: 700px;
+}
+
+.home-header {
+    font-size: 5rem;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+}
+
+.home-p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.home-pic {
+    display: none;
+}
+
+.about-header {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.about-desc {
+    text-align: left;
+    max-width: 100%;
+    margin-bottom: 5rem;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.about-p {
+    margin-bottom: 1rem;
+}
+
+.about-team {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.team-header {
+    flex: 0 0 200px;
+    font-size: 4.5rem;
+    line-height: 0.9;
+    text-align: left;
+}
+
+.team-person {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+}
+
+.person-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.team-person h4 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.person-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.pos-card {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+.contact-us {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-h {
+    font-size: 5rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.contact-p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.form-sec {
+    flex: 1;
+    width: 100%;
+}
+
+.form-sec form {
+    display: flex;
+    flex-direction: column;
+}
+
+::-webkit-input-placeholder {
+   color: #999;
+}
+
+.form-sec input, .form-sec textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    outline: none;
+    background-color: transparent;
+}
+
+.form-sec textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-sec input:focus, .form-sec textarea:focus {
+    border-color: var(--accent-color);
+}
+
+.form-sec button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+}
+
+#queryResults {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 8%;
+    max-width: 1300px;
+    margin: 80px auto 0 auto;
+    transition: transform 0.4s ease-in-out;
+}
+
+.result-card {
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.result-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.result-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.result-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.hide-search {
+    display: none !important;
+}
+
+@media (max-width: 900px) {
+    .about-team, .contacts {
+        flex-direction: column;
+    }
+    
+    .team-header {
+        flex: none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .contact-us {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .contact-h {
+        text-align: center;
+    }
+}

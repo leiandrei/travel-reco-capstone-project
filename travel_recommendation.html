@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Travel Recommendation Website</title>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <section class="logo">
+            <img src="assets/plane-svgrepo-com.svg" class="icon" width="100%" height="100%" style="object-fit: contain;">
+        </section>
+
+        <section class="search-bar">
+            <form id="searchForm">
+                <input type="search" name="search" id="search">
+                <button class="search-btn" type="submit">SEARCH</button>
+                <button class="clear-btn" id="clear-btn" type="button">CLEAR</button>
+            </form>
+        </section>
+
+        <section class="navlinks">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+        </section>
+    </nav>
+
+    <main id="main">
+        <div class="home" id="home">
+            <section class="home-description">
+                <h2 class="home-header">
+                    EXPLORE YOUR DREAM DESTINATION!
+                </h2>
+                <p class="home-p">
+                    The Travel Recommendation App helps users explore popular travel destinations
+                    through an interactive and user-friendly interface. It allows users to search
+                    for beaches, temples, countries, or specific country to view related cities along 
+                    with images and descriptions. The app dynamically fetches data from a structured JSON 
+                    file to display relevant results. It provides a simple and efficient way to discover and plan
+                    travel destinations.
+                </p>
+                <button class="home-btn">Book Now</button>
+            </section>
+
+            <section class="home-pic">
+                <img src="assets/plane-ticket-travel-svgrepo-com.svg" class="home-pic">
+            </section>
+
+            <section class="social-medias">
+                <a href="#"><img src="assets/facebook-svgrepo-com.svg" class="soc-icon"></a>
+                <a href="#"><img src="assets/instagram-svgrepo-com.svg" class="soc-icon"></a>
+                <a href="#"><img src="assets/twitter-svgrepo-com.svg" class="soc-icon"></a>
+                <a href="#"><img src="assets/youtube-168-svgrepo-com.svg" class="soc-icon"></a>
+            </section>
+        </div>
+
+        <div class="about" id="about">
+            <h1 class="about-header">ABOUT US</h1>
+            <section class="about-desc">
+                <p class="about-p">
+                    Welcome to Our Company! We are a team of passionate individuals dedicated to providing excellent
+                    services and products to our customers. Our mission is to provide the best experience for people travelling
+                    to different destinations around the world. 
+                </p>
+
+                <p class="about-p">
+                    Our values include, integrity, innovation, customer service, and teamwork. We believe in putting our
+                    customers first and working togethr to achieve our goals.
+                </p>
+            </section>
+
+            <section class="about-team">
+                <h2 class="team-header">
+                    OUR TEAM
+                </h2>
+
+                <div class="team-person">
+                    <img src="assets/user.png" class="person-icon">
+                    <h4>John Doe</h4>
+                    <p class="person-desc">
+                        John is responsible for overall
+                        company strategy and vision.
+                    </p>
+                    <span class="pos-card">
+                        CEO
+                    </span>
+                </div>
+
+                <div class="team-person">
+                    <img src="assets/user.png" class="person-icon">
+                    <h4>Celina Thomas</h4>
+                    <p class="person-desc">
+                        Celina lead the technical and 
+                        operations team.
+                    </p>
+                    <span class="pos-card">
+                        Team Lead
+                    </span>
+                </div>
+
+                <div class="team-person">
+                    <img src="assets/user.png" class="person-icon">
+                    <h4>Mike Tyson</h4>
+                    <p class="person-desc">
+                        Mike manages project delivery
+                        and client relationships.
+                    </p>
+                    <span class="pos-card">
+                        Delivery Head
+                    </span>
+                </div>
+            </section>
+        </div>
+
+        <div class="contacts" id="contacts">
+            <section class="contact-us">
+                <h1 class="contact-h">
+                    CONTACT US
+                </h1>
+                <p class="contact-p">
+                    Get In Touch!
+                </p>
+            </section>
+
+            <section class="form-sec">
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name"><br>
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email"><br>
+
+                    <label for="msg">Message</label>
+                    <textarea name="msg" id="msg"></textarea>
+
+                    <button type="submit">Submit</button>
+
+            </form>
+            </section>
+        </div>
+    </main>
+
+    <div class="search-query" id="queryResults">
+    </div>
+
+    <script src="travel_recommendation.js"></script>
+
+</body>
+</html>
